@@ -2,7 +2,7 @@
 
 **DevOps Engineer** with a Computer Science degree and hands-on experience in production environments.
 
-I specialize in designing, deploying, and maintaining **cloud-native infrastructure** using Kubernetes (Rancher + RKE2), Docker, Ansible, Kafka, Prometheus/Grafana/Signoz, and AWS services.
+I specialize in designing, deploying, and maintaining **cloud-native infrastructure** using Kubernetes (Rancher + RKE2), Docker, Ansible, Kafka, Prometheus/Grafana/Signoz, ELK Stack, and AWS services.
 
 ### 🛠 Tech Stack
 - **Orchestration**: Kubernetes, Rancher, Docker, Longhorn
