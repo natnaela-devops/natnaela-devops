@@ -24,4 +24,4 @@ I specialize in designing, deploying, and maintaining **cloud-native infrastruct
 Open to freelance opportunities in Kubernetes setup, infrastructure automation, monitoring optimization, and DevOps consulting.
 
 📧 natnaela.devops@gmail.com  
-🔗 [LinkedIn](your-linkedin-if-ready) | [Upwork](will-add-later)
+🔗 [LinkedIn](www.linkedin.com/in/natnaela-devops) | [Upwork](will-add-later)
