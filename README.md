@@ -6,7 +6,7 @@ I specialize in designing, deploying, and maintaining **scalable cloud-native in
 
 ### 🛠 Tech Stack
 - **Orchestration**: Kubernetes, Rancher, Docker, Longhorn  
-- **IaC & Automation**: Ansible  
+- **IaC & Automation**: Ansible, Terraform
 - **Observability**: Prometheus, Grafana, Signoz  
 - **Messaging & Storage**: Kafka, ActiveMQ, MinIO, YugabyteDB, PostgreSQL, MySQL  
 - **Cloud & Security**: AWS (Certified Cloud Practitioner & Solutions Architect Associate), Keycloak, Harbor  
@@ -25,4 +25,4 @@ I specialize in designing, deploying, and maintaining **scalable cloud-native in
 Open to freelance opportunities in **Kubernetes deployment**, infrastructure automation, observability optimization, and DevOps projects.
 
 📧 natnaela.devops@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/natnaela-devops) | [Upwork](https://www.upwork.com/freelancers/\~xxxxxxxxxxxxxxxx) ← update once your Upwork profile is live
+🔗 [LinkedIn](https://www.linkedin.com/in/natnaela-devops) | [Upwork]([https://www.upwork.com/freelancers/](https://www.upwork.com/freelancers/~013e930edae92f9d7f)
