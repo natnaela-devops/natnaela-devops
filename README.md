@@ -2,41 +2,41 @@
 
 **DevOps & Site Reliability Engineer | AWS Certified Solutions Architect | Kubernetes & Cloud Infrastructure**
 
-I build and operate reliable cloud-native platforms across AWS, Kubernetes, Linux, and on-premises infrastructure, including production environments supporting banking and public-health systems. My work focuses on infrastructure automation, production reliability, observability, incident response, and safe delivery for distributed systems.
+DevOps and Site Reliability Engineer with 3+ years of experience supporting Linux platforms, Kubernetes/RKE2 environments, and distributed services across banking and public-health systems. I work on reliable delivery, incident troubleshooting, observability, infrastructure automation, networking, identity, data platforms, and clear operational documentation.
+
+My strongest hands-on experience is in on-premises and cloud-native infrastructure. My AWS knowledge is certification-backed and reinforced through labs and architecture exercises; I do not present it as production AWS operating experience.
 
 Based in Addis Ababa, Ethiopia, and open to international DevOps, Cloud, Platform Engineering, and Site Reliability Engineering opportunities.
 
-## What I work on
+## What I bring
 
-- **Cloud and platform engineering:** AWS architecture, Kubernetes platforms, Linux systems, networking, storage, and container registries
-- **Site reliability engineering:** SLIs and SLOs, alerting, incident response, postmortems, capacity planning, runbooks, and toil reduction
-- **Infrastructure as code:** Terraform and Ansible automation with repeatable, reviewable delivery workflows
-- **Delivery engineering:** GitHub Actions, GitOps, Argo CD, container build pipelines, deployment safety, and rollback practices
-- **Observability:** metrics, logs, traces, dashboards, and actionable alerts using OpenTelemetry, Prometheus, Grafana, and OpenSearch
+- **Platform operations:** Linux, Kubernetes, RKE2, Rancher, Docker, Helm, Longhorn, networking, storage, upgrades, rollouts, and troubleshooting
+- **Reliability engineering:** incident response, health checks, observability, capacity awareness, failure drills, runbooks, and evidence-based production readiness
+- **Delivery automation:** GitHub Actions, GitOps, Argo CD, container pipelines, Kustomize, Ansible, and repeatable validation gates
+- **Cloud foundation:** AWS Solutions Architect certification, VPC/IAM/EC2/S3/RDS/Route 53/CloudWatch knowledge, plus structured cloud and Terraform labs
 
-## Selected projects
+## Selected engineering evidence
 
-| Project | Engineering focus |
-| --- | --- |
-| [Kubernetes RKE2 Cluster Setup](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | RKE2 cluster design, node roles, persistent storage, and Helm-based deployment examples |
-| [Spring Boot CI/CD Demo](https://github.com/natnaela-devops/springboot-ci-cd-demo) | CI, container packaging, private registry integration, Kubernetes delivery, and GitOps workflows |
-| [Ansible Playbooks Collection](https://github.com/natnaela-devops/ansible-playbooks-collection) | Repeatable Linux provisioning, container runtime installation, and Kubernetes node preparation |
-| [Kafka and PostgreSQL Setup](https://github.com/natnaela-devops/kafka-postgres-ha-setup) | Local event-streaming and relational-database environment for resilience and automation exercises |
+| Project | What it demonstrates | Automated evidence |
+| --- | --- | --- |
+| [RKE2 High-Availability Platform Reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Sanitized three-server etcd quorum, dedicated workers, Longhorn, security controls, Helm examples, and an operations runbook | Configuration and manifest validation in GitHub Actions |
+| [OpenSearch Observability Platform](https://github.com/natnaela-devops/devops-monitoring-stack) | OpenTelemetry-based logs, metrics, traces, service maps, SLO calculations, dashboards, and production gates for RKE2 | Functional lab validation and documented operating checks |
+| [Spring Boot CI/CD and GitOps Lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven, Docker, Kubernetes/Kustomize, Argo CD, GitHub Actions, GHCR, probes, resource controls, and container hardening | Tests, image build, health smoke test, linting, and schema validation |
+| [Kafka and PostgreSQL Resilience Lab](https://github.com/natnaela-devops/kafka-postgres-ha-setup) | Three-node Kafka KRaft quorum, PostgreSQL physical streaming replication, health checks, and controlled recovery boundaries | Cross-broker messaging, standby replication, and one-broker failure drill |
+| [Ansible Infrastructure Automation Lab](https://github.com/natnaela-devops/ansible-playbooks-collection) | Reusable roles for Linux baselines, Docker, hardening, and RKE2 node preparation | YAML lint, Ansible lint, syntax, and idempotency checks |
 
-> The public repositories use sanitized lab configurations. They demonstrate engineering patterns without exposing employer, customer, network, or production secrets.
+> Public repositories use sanitized or disposable lab configurations. They demonstrate engineering decisions and repeatable evidence without exposing employer, customer, network, credential, or production data.
 
 ## Core technologies
 
 | Area | Technologies |
 | --- | --- |
-| Cloud | AWS, VPC, EC2, IAM, S3, RDS, Route 53, CloudWatch |
-| Containers and platforms | Kubernetes, RKE2, Rancher, Docker, Helm, Argo CD, Longhorn, Harbor |
-| Infrastructure as code | Terraform, Ansible |
-| CI/CD and GitOps | GitHub Actions, Git, Argo CD |
-| Reliability and observability | OpenTelemetry, Prometheus, Grafana, OpenSearch, alerting, SLOs, incident response |
-| Identity and security | Keycloak, IAM, TLS, Kubernetes RBAC, Harbor |
-| Data, messaging, and storage | PostgreSQL, MySQL, Kafka, ActiveMQ, Redis, YugabyteDB, MinIO, SeaweedFS |
-| Systems, networking, and edge | Linux, Bash, Nginx, networking, DNS, load balancing |
+| Platforms | Linux, Kubernetes, RKE2, Rancher, Docker, Helm, Longhorn, Harbor, Argo CD |
+| Automation and delivery | Ansible, Terraform labs, Git, GitHub Actions, CI/CD, GitOps, Bash |
+| Reliability and observability | OpenTelemetry, Prometheus, Grafana, OpenSearch, SigNoz, alerting, SLOs, incident response |
+| Networking, identity, and edge | TCP/IP, DNS, TLS, Nginx, load balancing, Kubernetes RBAC, Keycloak, AWS IAM |
+| Data, messaging, and storage | PostgreSQL, MySQL, YugabyteDB, Redis, Kafka, ActiveMQ, SeaweedFS, MinIO |
+| AWS knowledge and labs | VPC, EC2, IAM, S3, RDS, Route 53, CloudWatch, architecture and Terraform exercises |
 
 ## Certifications
 
@@ -47,3 +47,4 @@ Based in Addis Ababa, Ethiopia, and open to international DevOps, Cloud, Platfor
 
 - [LinkedIn](https://www.linkedin.com/in/natnaela-devops)
 - [Email](mailto:natnaela.devops@gmail.com)
+
