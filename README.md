@@ -2,49 +2,67 @@
 
 **DevOps & Site Reliability Engineer | AWS Certified Solutions Architect | Kubernetes & Cloud Infrastructure**
 
-DevOps and Site Reliability Engineer with 3+ years of experience supporting Linux platforms, Kubernetes/RKE2 environments, and distributed services across banking and public-health systems. I work on reliable delivery, incident troubleshooting, observability, infrastructure automation, networking, identity, data platforms, and clear operational documentation.
+DevOps and Site Reliability Engineer with hands-on experience supporting Linux platforms, Kubernetes/RKE2 environments, and distributed services across banking and public-health systems. My work centers on reliable service delivery, incident troubleshooting, observability, infrastructure automation, networking, identity, data platforms, and clear operational documentation.
 
-My strongest hands-on experience is in on-premises and cloud-native infrastructure. My AWS knowledge is certification-backed and reinforced through labs and architecture exercises; I do not present it as production AWS operating experience.
+My strongest practical experience is in **Linux, on-premises infrastructure, Kubernetes/RKE2, middleware, databases, networking, and production-support troubleshooting**. My AWS knowledge is certification-backed and reinforced through labs and architecture exercises; I do not present it as production AWS operating experience.
 
-Based in Addis Ababa, Ethiopia, and open to international DevOps, Cloud, Platform Engineering, and Site Reliability Engineering opportunities.
+Based in Addis Ababa, Ethiopia, and open to international **DevOps, Site Reliability Engineering, Platform Engineering, Infrastructure, and Junior Cloud Engineering** opportunities.
 
-## What I bring
+## Engineering focus
 
-- **Platform operations:** Linux, Kubernetes, RKE2, Rancher, Docker, Helm, Longhorn, networking, storage, upgrades, rollouts, and troubleshooting
-- **Reliability engineering:** incident response, health checks, observability, capacity awareness, failure drills, runbooks, and evidence-based production readiness
-- **Delivery automation:** GitHub Actions, GitOps, Argo CD, container pipelines, Kustomize, Ansible, and repeatable validation gates
-- **Cloud foundation:** AWS Solutions Architect certification, VPC/IAM/EC2/S3/RDS/Route 53/CloudWatch knowledge, plus structured cloud and Terraform labs
+- **Kubernetes and platform operations:** RKE2, Rancher, Kubernetes, Helm, Longhorn, Harbor, containerd, Docker, workload troubleshooting, upgrades, storage, and cluster operations
+- **Linux and service reliability:** systemd, networking, DNS, TLS, filesystem/resource troubleshooting, Java service operations, process diagnostics, and recovery runbooks
+- **Distributed services and data platforms:** Kafka/KRaft, Redis Cluster, Predixy, PostgreSQL, MySQL, YugabyteDB, Oracle client operations, ActiveMQ, Keycloak, and Nginx
+- **Delivery automation:** GitHub Actions, GitOps, Argo CD, Kustomize, Ansible, Bash, container pipelines, validation gates, and repeatable deployment workflows
+- **Observability and incident response:** Prometheus, Alertmanager, OpenSearch, OpenTelemetry, log/metric/trace correlation, alert validation, capacity awareness, and evidence-driven troubleshooting
+- **Cloud foundation:** AWS Solutions Architect certification plus structured VPC, IAM, EC2, S3, RDS, Route 53, CloudWatch, architecture, and Terraform labs
 
 ## Selected engineering evidence
 
-| Project | What it demonstrates | Automated evidence |
+| Project | What it demonstrates | Evidence |
 | --- | --- | --- |
-| [RKE2 High-Availability Platform Reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Sanitized three-server etcd quorum, dedicated workers, Longhorn, security controls, Helm examples, and an operations runbook | Configuration and manifest validation in GitHub Actions |
-| [OpenSearch Observability Platform](https://github.com/natnaela-devops/devops-monitoring-stack) | OpenTelemetry-based logs, metrics, traces, service maps, SLO calculations, dashboards, and production gates for RKE2 | Functional lab validation and documented operating checks |
-| [Spring Boot CI/CD and GitOps Lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven, Docker, Kubernetes/Kustomize, Argo CD, GitHub Actions, GHCR, probes, resource controls, and container hardening | Tests, image build, health smoke test, linting, and schema validation |
-| [Kafka and PostgreSQL Resilience Lab](https://github.com/natnaela-devops/kafka-postgres-ha-setup) | Three-node Kafka KRaft quorum, PostgreSQL physical streaming replication, health checks, and controlled recovery boundaries | Cross-broker messaging, standby replication, and one-broker failure drill |
-| [Ansible Infrastructure Automation Lab](https://github.com/natnaela-devops/ansible-playbooks-collection) | Reusable roles for Linux baselines, Docker, hardening, and RKE2 node preparation | YAML lint, Ansible lint, syntax, and idempotency checks |
+| [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) | Sanitized troubleshooting patterns drawn from real DevOps/SRE work across RKE2, Linux, Kafka, Redis, databases, Java services, networking, storage, authentication, containers, and observability | Root-cause-oriented runbooks, verification steps, safety notes, and explicit unresolved-case tracking |
+| [RKE2 High-Availability Platform Reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Three-server etcd quorum, dedicated workers, Longhorn, security controls, Helm examples, HA design, and cluster operations | Configuration, shell, Helm, and Kubernetes manifest validation in GitHub Actions |
+| [Spring Boot CI/CD and GitOps Lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven, Docker, Kubernetes/Kustomize, Argo CD, GitHub Actions, GHCR/Harbor patterns, probes, resource controls, and container hardening | Tests, image build, health smoke test, linting, and Kubernetes schema validation |
+| [Kafka and PostgreSQL Resilience Lab](https://github.com/natnaela-devops/kafka-postgres-ha-setup) | Three-node Kafka KRaft quorum, PostgreSQL physical streaming replication, health checks, and controlled recovery boundaries | Cross-broker messaging, standby replication, and a controlled one-broker failure drill |
+| [Ansible Infrastructure Automation Lab](https://github.com/natnaela-devops/ansible-playbooks-collection) | Reusable Linux baseline, Docker, and RKE2 host-preparation roles with safe defaults and idempotent automation | YAML lint, Ansible lint, syntax validation, and repeat-run idempotency checks |
 
-> Public repositories use sanitized or disposable lab configurations. They demonstrate engineering decisions and repeatable evidence without exposing employer, customer, network, credential, or production data.
+> Public repositories use sanitized or disposable configurations. They demonstrate engineering decisions, troubleshooting methods, and repeatable evidence without exposing employer, customer, network, credential, or production data.
+
+## How I troubleshoot
+
+I try to separate symptoms from root causes and validate each layer independently. A reachable port does not prove an application is healthy; a Kubernetes manifest existing does not prove the pod is running; a healthy Kafka quorum does not prove the producer is configured correctly; and a missing socket is often a symptom of an earlier service-startup failure.
+
+The [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) repository captures this approach using a consistent structure:
+
+**Problem → Symptoms → Investigation → Root cause or evidence boundary → Recovery → Verification → Safety notes → Lessons learned**
 
 ## Core technologies
 
 | Area | Technologies |
 | --- | --- |
-| Platforms | Linux, Kubernetes, RKE2, Rancher, Docker, Helm, Longhorn, Harbor, Argo CD |
-| Automation and delivery | Ansible, Terraform labs, Git, GitHub Actions, CI/CD, GitOps, Bash |
-| Reliability and observability | OpenTelemetry, Prometheus, Grafana, OpenSearch, SigNoz, alerting, SLOs, incident response |
-| Networking, identity, and edge | TCP/IP, DNS, TLS, Nginx, load balancing, Kubernetes RBAC, Keycloak, AWS IAM |
-| Data, messaging, and storage | PostgreSQL, MySQL, YugabyteDB, Redis, Kafka, ActiveMQ, SeaweedFS, MinIO |
+| Platforms | Linux, Kubernetes, RKE2, Rancher, Docker, containerd, Helm, Longhorn, Harbor, Argo CD |
+| Automation and delivery | Ansible, Git, GitHub Actions, CI/CD, GitOps, Kustomize, Bash, Terraform labs |
+| Reliability and observability | Prometheus, Alertmanager, OpenSearch, OpenTelemetry, Grafana, SLO concepts, incident response, runbooks |
+| Networking, identity, and edge | TCP/IP, DNS, TLS, Nginx, load balancing, VPN troubleshooting, Kubernetes RBAC, Keycloak, AWS IAM |
+| Data, messaging, and storage | PostgreSQL, MySQL, YugabyteDB, Redis, Predixy, Kafka/KRaft, ActiveMQ, Oracle client tooling, SeaweedFS, MinIO |
 | AWS knowledge and labs | VPC, EC2, IAM, S3, RDS, Route 53, CloudWatch, architecture and Terraform exercises |
 
 ## Certifications
 
-- AWS Certified Solutions Architect – Associate
-- AWS Certified Cloud Practitioner
+- **AWS Certified Solutions Architect – Associate**
+- **AWS Certified Cloud Practitioner**
+
+## Portfolio principles
+
+- No fabricated uptime, performance, or production-scale claims
+- Production work is generalized and sanitized before publication
+- Lab projects are clearly labeled as labs or references
+- CI and validation output are preferred over claims that cannot be reproduced
+- Recovery procedures include verification and safety boundaries, not just commands
+- Secrets, internal IPs, customer identifiers, private certificates, and environment-specific data stay out of public repositories
 
 ## Connect
 
 - [LinkedIn](https://www.linkedin.com/in/natnaela-devops)
 - [Email](mailto:natnaela.devops@gmail.com)
-
