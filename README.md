@@ -8,6 +8,38 @@ My strongest practical experience is in **Linux, on-premises infrastructure, Kub
 
 Based in Addis Ababa, Ethiopia, and open to international **DevOps, Site Reliability Engineering, Platform Engineering, Infrastructure, and Junior Cloud Engineering** opportunities.
 
+## Start here — production infrastructure evidence
+
+**[Banking Digital Platform Infrastructure — Production Case Study](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/blob/main/BANKING-PLATFORM-CASE-STUDY.md)**
+
+This is the closest public representation of the platform work behind my banking DevOps/SRE experience. It is a sanitized case study of hands-on **UAT and production** work across:
+
+**RKE2 / Rancher · Longhorn · Harbor · Kafka/KRaft · Redis Cluster / Predixy · YugabyteDB · TimescaleDB · Keycloak · Nginx / TLS · SeaweedFS · PM2 · OpenSearch · Prometheus / Alertmanager**
+
+The documentation focuses on what I actually worked on: platform setup and operations, service integration, secure routing, cluster readiness, storage, observability, authentication and certificate hardening, incident troubleshooting, UAT validation, production rollout, and rollback-aware change execution.
+
+```text
+Users / mobile / web
+        |
+        v
+   Nginx / TLS edge
+        |
+   APIs / gateways / identity / web
+        |
+        v
+     RKE2 / Rancher
+        |
+   +----+-----+-----------+-----------+
+   |          |           |           |
+ Kafka      Redis      YugabyteDB   TimescaleDB
+ /KRaft    /Predixy
+   |
+   +--> Longhorn / Harbor / SeaweedFS
+   +--> OpenSearch / Prometheus / Alertmanager
+```
+
+The case study intentionally excludes customer names, real IPs/domains, credentials, certificates, private keys, production data, and unverified performance claims.
+
 ## Engineering focus
 
 - **Kubernetes and platform operations:** RKE2, Rancher, Kubernetes, Helm, Longhorn, Harbor, containerd, Docker, workload troubleshooting, upgrades, storage, and cluster operations
@@ -35,7 +67,7 @@ The public documentation is deliberately generalized: it preserves the engineeri
 
 | Project | What it demonstrates | Evidence |
 | --- | --- | --- |
-| [Banking Digital Platform Infrastructure Case Study](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/tree/main/projects/banking-digital-platform-infrastructure) | Sanitized UAT and production platform work across RKE2/Rancher, Kafka/KRaft mTLS, Redis Cluster/Predixy, YugabyteDB, TimescaleDB, Keycloak, Nginx, SeaweedFS, Harbor, Longhorn, OpenSearch, Prometheus, and supporting services | Layered architecture, operational scope, migration patterns, security hardening, UAT-to-production workflow, and explicit evidence boundaries |
+| [Banking Digital Platform Infrastructure Case Study](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/blob/main/BANKING-PLATFORM-CASE-STUDY.md) | Sanitized UAT and production platform work across RKE2/Rancher, Kafka/KRaft mTLS, Redis Cluster/Predixy, YugabyteDB, TimescaleDB, Keycloak, Nginx, SeaweedFS, Harbor, Longhorn, OpenSearch, Prometheus, and supporting services | Architecture, operational scope, migration patterns, security hardening, UAT-to-production workflow, and explicit evidence boundaries |
 | [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) | Sanitized troubleshooting patterns drawn from real DevOps/SRE work across RKE2, Linux, Kafka/KRaft mTLS, Redis/Predixy, databases, Java services, networking, storage, authentication, containers, and observability | Root-cause-oriented runbooks, rolling-change procedures, runtime verification, safety notes, and explicit evidence boundaries |
 | [RKE2 High-Availability Platform Reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Three-server etcd quorum, dedicated workers, Longhorn, security controls, Helm examples, HA design, and cluster operations | Configuration, shell, Helm, and Kubernetes manifest validation in GitHub Actions |
 | [Spring Boot CI/CD and GitOps Lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven, Docker, Kubernetes/Kustomize, Argo CD, GitHub Actions, GHCR/Harbor patterns, probes, resource controls, and container hardening | Tests, image build, health smoke test, linting, and Kubernetes schema validation |
