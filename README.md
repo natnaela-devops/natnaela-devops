@@ -17,11 +17,24 @@ Based in Addis Ababa, Ethiopia, and open to international **DevOps, Site Reliabi
 - **Observability and incident response:** Prometheus, Alertmanager, OpenSearch, OpenTelemetry, log/metric/trace correlation, alert validation, capacity awareness, and evidence-driven troubleshooting
 - **Cloud foundation:** AWS Solutions Architect certification plus structured VPC, IAM, EC2, S3, RDS, Route 53, CloudWatch, architecture, and Terraform labs
 
+## Recent operational focus
+
+Recent sanitized runbooks document work such as:
+
+- rolling a three-node Kafka/KRaft cluster from legacy PLAINTEXT application access to a parallel **mTLS listener** without restarting the whole cluster
+- issuing and validating per-broker and per-application certificate identities, including PKCS12 and JKS client stores
+- separating Kafka quorum health from Java/WildFly/Spring client configuration failures
+- validating runtime Kafka properties, consumer-group joins, partition assignments, and multi-broker communication rather than stopping at a successful TCP connection
+- troubleshooting Rancher/Kubernetes binary Secret encoding, keystore password failures, and certificate-store integrity
+- validating **Redis Cluster + Predixy** routing, authentication behavior, `MOVED` responses, and application access paths
+
+The public documentation is deliberately generalized: it preserves the engineering method and verification steps while excluding customer names, internal addresses, credentials, private certificates, and production identifiers.
+
 ## Selected engineering evidence
 
 | Project | What it demonstrates | Evidence |
 | --- | --- | --- |
-| [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) | Sanitized troubleshooting patterns drawn from real DevOps/SRE work across RKE2, Linux, Kafka, Redis, databases, Java services, networking, storage, authentication, containers, and observability | Root-cause-oriented runbooks, verification steps, safety notes, and explicit unresolved-case tracking |
+| [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) | Sanitized troubleshooting patterns drawn from real DevOps/SRE work across RKE2, Linux, Kafka/KRaft mTLS, Redis/Predixy, databases, Java services, networking, storage, authentication, containers, and observability | Root-cause-oriented runbooks, rolling-change procedures, runtime verification, safety notes, and explicit evidence boundaries |
 | [RKE2 High-Availability Platform Reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Three-server etcd quorum, dedicated workers, Longhorn, security controls, Helm examples, HA design, and cluster operations | Configuration, shell, Helm, and Kubernetes manifest validation in GitHub Actions |
 | [Spring Boot CI/CD and GitOps Lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven, Docker, Kubernetes/Kustomize, Argo CD, GitHub Actions, GHCR/Harbor patterns, probes, resource controls, and container hardening | Tests, image build, health smoke test, linting, and Kubernetes schema validation |
 | [Kafka and PostgreSQL Resilience Lab](https://github.com/natnaela-devops/kafka-postgres-ha-setup) | Three-node Kafka KRaft quorum, PostgreSQL physical streaming replication, health checks, and controlled recovery boundaries | Cross-broker messaging, standby replication, and a controlled one-broker failure drill |
