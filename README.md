@@ -12,15 +12,16 @@ Based in Addis Ababa, Ethiopia, and open to international **DevOps, Site Reliabi
 
 - **Kubernetes and platform operations:** RKE2, Rancher, Kubernetes, Helm, Longhorn, Harbor, containerd, Docker, workload troubleshooting, upgrades, storage, and cluster operations
 - **Linux and service reliability:** systemd, networking, DNS, TLS, filesystem/resource troubleshooting, Java service operations, process diagnostics, and recovery runbooks
-- **Distributed services and data platforms:** Kafka/KRaft, Redis Cluster, Predixy, PostgreSQL, MySQL, YugabyteDB, Oracle client operations, ActiveMQ, Keycloak, and Nginx
+- **Distributed services and data platforms:** Kafka/KRaft, Redis Cluster, Predixy, PostgreSQL, TimescaleDB, MySQL, YugabyteDB, Oracle client operations, ActiveMQ, Keycloak, Nginx, and SeaweedFS
 - **Delivery automation:** GitHub Actions, GitOps, Argo CD, Kustomize, Ansible, Bash, container pipelines, validation gates, and repeatable deployment workflows
 - **Observability and incident response:** Prometheus, Alertmanager, OpenSearch, OpenTelemetry, log/metric/trace correlation, alert validation, capacity awareness, and evidence-driven troubleshooting
 - **Cloud foundation:** AWS Solutions Architect certification plus structured VPC, IAM, EC2, S3, RDS, Route 53, CloudWatch, architecture, and Terraform labs
 
 ## Recent operational focus
 
-Recent sanitized runbooks document work such as:
+Recent sanitized documentation includes:
 
+- setup and operation of a multi-service **banking digital platform across UAT and production**, spanning RKE2/Rancher, Longhorn, Harbor, Kafka, Redis/Predixy, YugabyteDB, TimescaleDB, Keycloak, Nginx, SeaweedFS, PM2, OpenSearch, and Prometheus/Alertmanager
 - rolling a three-node Kafka/KRaft cluster from legacy PLAINTEXT application access to a parallel **mTLS listener** without restarting the whole cluster
 - issuing and validating per-broker and per-application certificate identities, including PKCS12 and JKS client stores
 - separating Kafka quorum health from Java/WildFly/Spring client configuration failures
@@ -34,10 +35,10 @@ The public documentation is deliberately generalized: it preserves the engineeri
 
 | Project | What it demonstrates | Evidence |
 | --- | --- | --- |
+| [Banking Digital Platform Infrastructure Case Study](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/tree/main/projects/banking-digital-platform-infrastructure) | Sanitized UAT and production platform work across RKE2/Rancher, Kafka/KRaft mTLS, Redis Cluster/Predixy, YugabyteDB, TimescaleDB, Keycloak, Nginx, SeaweedFS, Harbor, Longhorn, OpenSearch, Prometheus, and supporting services | Layered architecture, operational scope, migration patterns, security hardening, UAT-to-production workflow, and explicit evidence boundaries |
 | [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) | Sanitized troubleshooting patterns drawn from real DevOps/SRE work across RKE2, Linux, Kafka/KRaft mTLS, Redis/Predixy, databases, Java services, networking, storage, authentication, containers, and observability | Root-cause-oriented runbooks, rolling-change procedures, runtime verification, safety notes, and explicit evidence boundaries |
 | [RKE2 High-Availability Platform Reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Three-server etcd quorum, dedicated workers, Longhorn, security controls, Helm examples, HA design, and cluster operations | Configuration, shell, Helm, and Kubernetes manifest validation in GitHub Actions |
 | [Spring Boot CI/CD and GitOps Lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven, Docker, Kubernetes/Kustomize, Argo CD, GitHub Actions, GHCR/Harbor patterns, probes, resource controls, and container hardening | Tests, image build, health smoke test, linting, and Kubernetes schema validation |
-| [Kafka and PostgreSQL Resilience Lab](https://github.com/natnaela-devops/kafka-postgres-ha-setup) | Three-node Kafka KRaft quorum, PostgreSQL physical streaming replication, health checks, and controlled recovery boundaries | Cross-broker messaging, standby replication, and a controlled one-broker failure drill |
 | [Ansible Infrastructure Automation Lab](https://github.com/natnaela-devops/ansible-playbooks-collection) | Reusable Linux baseline, Docker, and RKE2 host-preparation roles with safe defaults and idempotent automation | YAML lint, Ansible lint, syntax validation, and repeat-run idempotency checks |
 
 > Public repositories use sanitized or disposable configurations. They demonstrate engineering decisions, troubleshooting methods, and repeatable evidence without exposing employer, customer, network, credential, or production data.
@@ -58,7 +59,7 @@ The [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-
 | Automation and delivery | Ansible, Git, GitHub Actions, CI/CD, GitOps, Kustomize, Bash, Terraform labs |
 | Reliability and observability | Prometheus, Alertmanager, OpenSearch, OpenTelemetry, Grafana, SLO concepts, incident response, runbooks |
 | Networking, identity, and edge | TCP/IP, DNS, TLS, Nginx, load balancing, VPN troubleshooting, Kubernetes RBAC, Keycloak, AWS IAM |
-| Data, messaging, and storage | PostgreSQL, MySQL, YugabyteDB, Redis, Predixy, Kafka/KRaft, ActiveMQ, Oracle client tooling, SeaweedFS, MinIO |
+| Data, messaging, and storage | PostgreSQL, TimescaleDB, MySQL, YugabyteDB, Redis, Predixy, Kafka/KRaft, ActiveMQ, Oracle client tooling, SeaweedFS, MinIO |
 | AWS knowledge and labs | VPC, EC2, IAM, S3, RDS, Route 53, CloudWatch, architecture and Terraform exercises |
 
 ## Certifications
