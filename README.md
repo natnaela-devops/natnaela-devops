@@ -10,13 +10,13 @@ Based in Addis Ababa, Ethiopia, and open to international **DevOps, Site Reliabi
 
 ## Start here — production infrastructure evidence
 
-**[Banking Digital Platform Infrastructure — Production Case Study](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/blob/main/BANKING-PLATFORM-CASE-STUDY.md)**
+**[Banking Digital Platform Infrastructure](https://github.com/natnaela-devops/banking-digital-platform-infrastructure)**
 
-This is the closest public representation of the platform work behind my banking DevOps/SRE experience. It is a sanitized case study of hands-on **UAT and production** work across:
+This is the closest public representation of the platform work behind my banking DevOps/SRE experience: a sanitized case study of hands-on **UAT and production** work across:
 
 **RKE2 / Rancher · Longhorn · Harbor · Kafka/KRaft · Redis Cluster / Predixy · YugabyteDB · TimescaleDB · Keycloak · Nginx / TLS · SeaweedFS · PM2 · OpenSearch · Prometheus / Alertmanager**
 
-The documentation focuses on what I actually worked on: platform setup and operations, service integration, secure routing, cluster readiness, storage, observability, authentication and certificate hardening, incident troubleshooting, UAT validation, production rollout, and rollback-aware change execution.
+It documents platform setup and operations, service integration, secure routing, cluster readiness, storage, observability, authentication and certificate hardening, incident troubleshooting, UAT validation, production rollout, and rollback-aware change execution.
 
 ```text
 Users / mobile / web
@@ -51,23 +51,19 @@ The case study intentionally excludes customer names, real IPs/domains, credenti
 
 ## Recent operational focus
 
-Recent sanitized documentation includes:
-
-- setup and operation of a multi-service **banking digital platform across UAT and production**, spanning RKE2/Rancher, Longhorn, Harbor, Kafka, Redis/Predixy, YugabyteDB, TimescaleDB, Keycloak, Nginx, SeaweedFS, PM2, OpenSearch, and Prometheus/Alertmanager
+- setup and operation of a multi-service banking digital platform across UAT and production
 - rolling a three-node Kafka/KRaft cluster from legacy PLAINTEXT application access to a parallel **mTLS listener** without restarting the whole cluster
-- issuing and validating per-broker and per-application certificate identities, including PKCS12 and JKS client stores
+- issuing and validating per-broker and per-application certificate identities using PKCS12 and JKS stores
 - separating Kafka quorum health from Java/WildFly/Spring client configuration failures
-- validating runtime Kafka properties, consumer-group joins, partition assignments, and multi-broker communication rather than stopping at a successful TCP connection
+- validating runtime Kafka properties, consumer-group joins, partition assignments, and multi-broker communication
 - troubleshooting Rancher/Kubernetes binary Secret encoding, keystore password failures, and certificate-store integrity
-- validating **Redis Cluster + Predixy** routing, authentication behavior, `MOVED` responses, and application access paths
-
-The public documentation is deliberately generalized: it preserves the engineering method and verification steps while excluding customer names, internal addresses, credentials, private certificates, and production identifiers.
+- validating **Redis Cluster + Predixy** routing, authentication, `MOVED` behavior, and application access paths
 
 ## Selected engineering evidence
 
 | Project | What it demonstrates | Evidence |
 | --- | --- | --- |
-| [Banking Digital Platform Infrastructure Case Study](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/blob/main/BANKING-PLATFORM-CASE-STUDY.md) | Sanitized UAT and production platform work across RKE2/Rancher, Kafka/KRaft mTLS, Redis Cluster/Predixy, YugabyteDB, TimescaleDB, Keycloak, Nginx, SeaweedFS, Harbor, Longhorn, OpenSearch, Prometheus, and supporting services | Architecture, operational scope, migration patterns, security hardening, UAT-to-production workflow, and explicit evidence boundaries |
+| [Banking Digital Platform Infrastructure](https://github.com/natnaela-devops/banking-digital-platform-infrastructure) | Sanitized UAT and production platform work across RKE2/Rancher, Kafka/KRaft mTLS, Redis Cluster/Predixy, YugabyteDB, TimescaleDB, Keycloak, Nginx, SeaweedFS, Harbor, Longhorn, OpenSearch, Prometheus, and supporting services | Architecture, operational scope, migration patterns, security hardening, UAT-to-production workflow, troubleshooting and recovery |
 | [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) | Sanitized troubleshooting patterns drawn from real DevOps/SRE work across RKE2, Linux, Kafka/KRaft mTLS, Redis/Predixy, databases, Java services, networking, storage, authentication, containers, and observability | Root-cause-oriented runbooks, rolling-change procedures, runtime verification, safety notes, and explicit evidence boundaries |
 | [RKE2 High-Availability Platform Reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Three-server etcd quorum, dedicated workers, Longhorn, security controls, Helm examples, HA design, and cluster operations | Configuration, shell, Helm, and Kubernetes manifest validation in GitHub Actions |
 | [Spring Boot CI/CD and GitOps Lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven, Docker, Kubernetes/Kustomize, Argo CD, GitHub Actions, GHCR/Harbor patterns, probes, resource controls, and container hardening | Tests, image build, health smoke test, linting, and Kubernetes schema validation |
@@ -77,7 +73,7 @@ The public documentation is deliberately generalized: it preserves the engineeri
 
 ## How I troubleshoot
 
-I try to separate symptoms from root causes and validate each layer independently. A reachable port does not prove an application is healthy; a Kubernetes manifest existing does not prove the pod is running; a healthy Kafka quorum does not prove the producer is configured correctly; and a missing socket is often a symptom of an earlier service-startup failure.
+I separate symptoms from root causes and validate each layer independently. A reachable port does not prove an application is healthy; a Kubernetes manifest existing does not prove the pod is running; and a healthy Kafka quorum does not prove the producer is configured correctly.
 
 The [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) repository captures this approach using a consistent structure:
 
@@ -89,7 +85,7 @@ The [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-
 | --- | --- |
 | Platforms | Linux, Kubernetes, RKE2, Rancher, Docker, containerd, Helm, Longhorn, Harbor, Argo CD |
 | Automation and delivery | Ansible, Git, GitHub Actions, CI/CD, GitOps, Kustomize, Bash, Terraform labs |
-| Reliability and observability | Prometheus, Alertmanager, OpenSearch, OpenTelemetry, Grafana, SLO concepts, incident response, runbooks |
+| Reliability and observability | Prometheus, Alertmanager, OpenSearch, OpenTelemetry, Grafana, incident response, runbooks |
 | Networking, identity, and edge | TCP/IP, DNS, TLS, Nginx, load balancing, VPN troubleshooting, Kubernetes RBAC, Keycloak, AWS IAM |
 | Data, messaging, and storage | PostgreSQL, TimescaleDB, MySQL, YugabyteDB, Redis, Predixy, Kafka/KRaft, ActiveMQ, Oracle client tooling, SeaweedFS, MinIO |
 | AWS knowledge and labs | VPC, EC2, IAM, S3, RDS, Route 53, CloudWatch, architecture and Terraform exercises |
