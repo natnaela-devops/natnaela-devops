@@ -51,6 +51,9 @@ The case study intentionally excludes customer names, real IPs/domains, credenti
 
 ## Recent operational focus
 
+- diagnosing an RKE2/Rancher control-plane outage by correlating API failure, service restarts, kernel-level block I/O errors, filesystem write errors, embedded etcd behavior, container runtime health, and Longhorn volume state
+- separating the confirmed failure mechanism — severe host/block-storage I/O degradation — from an unproven upstream storage or hypervisor trigger instead of forcing a speculative RCA
+- validating Longhorn disk capacity, schedulability, replica state, PVC ownership, and recovery before considering destructive storage or etcd actions
 - setup and operation of a multi-service banking digital platform across UAT and production
 - rolling a three-node Kafka/KRaft cluster from legacy PLAINTEXT application access to a parallel **mTLS listener** without restarting the whole cluster
 - issuing and validating per-broker and per-application certificate identities using PKCS12 and JKS stores
@@ -74,6 +77,8 @@ The case study intentionally excludes customer names, real IPs/domains, credenti
 ## How I troubleshoot
 
 I separate symptoms from root causes and validate each layer independently. A reachable port does not prove an application is healthy; a Kubernetes manifest existing does not prove the pod is running; and a healthy Kafka quorum does not prove the producer is configured correctly.
+
+For infrastructure incidents, I also distinguish **failure mechanism** from **upstream trigger**. For example, kernel I/O errors and filesystem failures can prove why RKE2/etcd became unstable without proving whether the original trigger was a datastore fault, hypervisor issue, or workload-driven contention.
 
 The [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) repository captures this approach using a consistent structure:
 
@@ -102,6 +107,7 @@ The [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-
 - Lab projects are clearly labeled as labs or references
 - CI and validation output are preferred over claims that cannot be reproduced
 - Recovery procedures include verification and safety boundaries, not just commands
+- Root-cause statements stop where the available evidence stops
 - Secrets, internal IPs, customer identifiers, private certificates, and environment-specific data stay out of public repositories
 
 ## Connect
