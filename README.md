@@ -1,116 +1,39 @@
 # Natnael Amsalu
 
-**DevOps & Site Reliability Engineer | AWS Certified Solutions Architect | Kubernetes & Cloud Infrastructure**
+**DevOps / SRE | Linux · Kubernetes/RKE2 · Kafka · GitOps · Observability**
 
-DevOps and Site Reliability Engineer with hands-on experience supporting Linux platforms, Kubernetes/RKE2 environments, and distributed services across banking and public-health systems. My work centers on reliable service delivery, incident troubleshooting, observability, infrastructure automation, networking, identity, data platforms, and clear operational documentation.
+I work on Linux infrastructure and the services around it: Kubernetes clusters, application deployments, messaging, databases, reverse proxies, and monitoring. Most of my hands-on experience comes from supporting banking and public-health systems, where troubleshooting often crosses several layers.
 
-My strongest practical experience is in **Linux, on-premises infrastructure, Kubernetes/RKE2, middleware, databases, networking, and production-support troubleshooting**. My AWS knowledge is certification-backed and reinforced through labs and architecture exercises; I do not present it as production AWS operating experience.
+I'm based in Addis Ababa, Ethiopia, and interested in DevOps, SRE, platform and infrastructure engineering roles. I'm an AWS Certified Solutions Architect – Associate and Cloud Practitioner; my cloud practice is mostly certification and labs, while my day-to-day infrastructure experience is primarily on-premises.
 
-Based in Addis Ababa, Ethiopia, and open to international **DevOps, Site Reliability Engineering, Platform Engineering, Infrastructure, and Junior Cloud Engineering** opportunities.
+## Work worth looking at
 
-## Start here — production infrastructure evidence
-
-**[Banking Digital Platform Infrastructure](https://github.com/natnaela-devops/banking-digital-platform-infrastructure)**
-
-This is the closest public representation of the platform work behind my banking DevOps/SRE experience: a sanitized case study of hands-on **UAT and production** work across:
-
-**RKE2 / Rancher · Longhorn · Harbor · Kafka/KRaft · Redis Cluster / Predixy · YugabyteDB · TimescaleDB · Keycloak · Nginx / TLS · SeaweedFS · PM2 · OpenSearch · Prometheus / Alertmanager**
-
-It documents platform setup and operations, service integration, secure routing, cluster readiness, storage, observability, authentication and certificate hardening, incident troubleshooting, UAT validation, production rollout, and rollback-aware change execution.
-
-```text
-Users / mobile / web
-        |
-        v
-   Nginx / TLS edge
-        |
-   APIs / gateways / identity / web
-        |
-        v
-     RKE2 / Rancher
-        |
-   +----+-----+-----------+-----------+
-   |          |           |           |
- Kafka      Redis      YugabyteDB   TimescaleDB
- /KRaft    /Predixy
-   |
-   +--> Longhorn / Harbor / SeaweedFS
-   +--> OpenSearch / Prometheus / Alertmanager
-```
-
-The case study intentionally excludes customer names, real IPs/domains, credentials, certificates, private keys, production data, and unverified performance claims.
-
-## Engineering focus
-
-- **Kubernetes and platform operations:** RKE2, Rancher, Kubernetes, Helm, Longhorn, Harbor, containerd, Docker, workload troubleshooting, upgrades, storage, and cluster operations
-- **Linux and service reliability:** systemd, networking, DNS, TLS, filesystem/resource troubleshooting, Java service operations, process diagnostics, and recovery runbooks
-- **Distributed services and data platforms:** Kafka/KRaft, Redis Cluster, Predixy, PostgreSQL, TimescaleDB, MySQL, YugabyteDB, Oracle client operations, ActiveMQ, Keycloak, Nginx, and SeaweedFS
-- **Delivery automation:** GitHub Actions, GitOps, Argo CD, Kustomize, Ansible, Bash, container pipelines, validation gates, and repeatable deployment workflows
-- **Observability and incident response:** Prometheus, Alertmanager, OpenSearch, OpenTelemetry, log/metric/trace correlation, alert validation, capacity awareness, and evidence-driven troubleshooting
-- **Cloud foundation:** AWS Solutions Architect certification plus structured VPC, IAM, EC2, S3, RDS, Route 53, CloudWatch, architecture, and Terraform labs
-
-## Recent operational focus
-
-- diagnosing an RKE2/Rancher control-plane outage by correlating API failure, service restarts, kernel-level block I/O errors, filesystem write errors, embedded etcd behavior, container runtime health, and Longhorn volume state
-- separating the confirmed failure mechanism — severe host/block-storage I/O degradation — from an unproven upstream storage or hypervisor trigger instead of forcing a speculative RCA
-- validating Longhorn disk capacity, schedulability, replica state, PVC ownership, and recovery before considering destructive storage or etcd actions
-- setup and operation of a multi-service banking digital platform across UAT and production
-- rolling a three-node Kafka/KRaft cluster from legacy PLAINTEXT application access to a parallel **mTLS listener** without restarting the whole cluster
-- issuing and validating per-broker and per-application certificate identities using PKCS12 and JKS stores
-- separating Kafka quorum health from Java/WildFly/Spring client configuration failures
-- validating runtime Kafka properties, consumer-group joins, partition assignments, and multi-broker communication
-- troubleshooting Rancher/Kubernetes binary Secret encoding, keystore password failures, and certificate-store integrity
-- validating **Redis Cluster + Predixy** routing, authentication, `MOVED` behavior, and application access paths
-
-## Selected engineering evidence
-
-| Project | What it demonstrates | Evidence |
-| --- | --- | --- |
-| [Banking Digital Platform Infrastructure](https://github.com/natnaela-devops/banking-digital-platform-infrastructure) | Sanitized UAT and production platform work across RKE2/Rancher, Kafka/KRaft mTLS, Redis Cluster/Predixy, YugabyteDB, TimescaleDB, Keycloak, Nginx, SeaweedFS, Harbor, Longhorn, OpenSearch, Prometheus, and supporting services | Architecture, operational scope, migration patterns, security hardening, UAT-to-production workflow, troubleshooting and recovery |
-| [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) | Sanitized troubleshooting patterns drawn from real DevOps/SRE work across RKE2, Linux, Kafka/KRaft mTLS, Redis/Predixy, databases, Java services, networking, storage, authentication, containers, and observability | Root-cause-oriented runbooks, rolling-change procedures, runtime verification, safety notes, and explicit evidence boundaries |
-| [RKE2 High-Availability Platform Reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Three-server etcd quorum, dedicated workers, Longhorn, security controls, Helm examples, HA design, and cluster operations | Configuration, shell, Helm, and Kubernetes manifest validation in GitHub Actions |
-| [Spring Boot CI/CD and GitOps Lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven, Docker, Kubernetes/Kustomize, Argo CD, GitHub Actions, GHCR/Harbor patterns, probes, resource controls, and container hardening | Tests, image build, health smoke test, linting, and Kubernetes schema validation |
-| [Ansible Infrastructure Automation Lab](https://github.com/natnaela-devops/ansible-playbooks-collection) | Reusable Linux baseline, Docker, and RKE2 host-preparation roles with safe defaults and idempotent automation | YAML lint, Ansible lint, syntax validation, and repeat-run idempotency checks |
-
-> Public repositories use sanitized or disposable configurations. They demonstrate engineering decisions, troubleshooting methods, and repeatable evidence without exposing employer, customer, network, credential, or production data.
-
-## How I troubleshoot
-
-I separate symptoms from root causes and validate each layer independently. A reachable port does not prove an application is healthy; a Kubernetes manifest existing does not prove the pod is running; and a healthy Kafka quorum does not prove the producer is configured correctly.
-
-For infrastructure incidents, I also distinguish **failure mechanism** from **upstream trigger**. For example, kernel I/O errors and filesystem failures can prove why RKE2/etcd became unstable without proving whether the original trigger was a datastore fault, hypervisor issue, or workload-driven contention.
-
-The [DevOps Troubleshooting Runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) repository captures this approach using a consistent structure:
-
-**Problem → Symptoms → Investigation → Root cause or evidence boundary → Recovery → Verification → Safety notes → Lessons learned**
-
-## Core technologies
-
-| Area | Technologies |
+| Repository | Why I built or documented it |
 | --- | --- |
-| Platforms | Linux, Kubernetes, RKE2, Rancher, Docker, containerd, Helm, Longhorn, Harbor, Argo CD |
-| Automation and delivery | Ansible, Git, GitHub Actions, CI/CD, GitOps, Kustomize, Bash, Terraform labs |
-| Reliability and observability | Prometheus, Alertmanager, OpenSearch, OpenTelemetry, Grafana, incident response, runbooks |
-| Networking, identity, and edge | TCP/IP, DNS, TLS, Nginx, load balancing, VPN troubleshooting, Kubernetes RBAC, Keycloak, AWS IAM |
-| Data, messaging, and storage | PostgreSQL, TimescaleDB, MySQL, YugabyteDB, Redis, Predixy, Kafka/KRaft, ActiveMQ, Oracle client tooling, SeaweedFS, MinIO |
-| AWS knowledge and labs | VPC, EC2, IAM, S3, RDS, Route 53, CloudWatch, architecture and Terraform exercises |
+| [Banking digital platform infrastructure](https://github.com/natnaela-devops/banking-digital-platform-infrastructure) | Sanitized notes from operating RKE2, messaging, storage, identity, edge routing and observability across UAT and production. Includes a [GitOps delivery failure map](https://github.com/natnaela-devops/banking-digital-platform-infrastructure/blob/main/docs/delivery-failure-boundaries.md). |
+| [Troubleshooting runbooks](https://github.com/natnaela-devops/devops-troubleshooting-runbooks) | Problems I've encountered or investigated, with commands, causes, fixes, verification steps and notes on what the evidence did *not* establish. |
+| [RKE2 HA reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Three-server etcd quorum, separate workers, Longhorn and Kubernetes security settings. Includes [CI validation](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup/actions). |
+| [Spring Boot CI/CD lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven tests, Docker build and health check, Kustomize validation, image publishing and a reviewable Argo CD promotion path. [Workflow runs](https://github.com/natnaela-devops/springboot-ci-cd-demo/actions). |
+| [Ansible host preparation](https://github.com/natnaela-devops/ansible-playbooks-collection) | Roles for common Linux setup, Docker and RKE2 prerequisites. CI covers lint, syntax and an idempotency check for the common role. [Workflow runs](https://github.com/natnaela-devops/ansible-playbooks-collection/actions). |
 
-## Certifications
+## Three problems that shaped how I work
 
-- **AWS Certified Solutions Architect – Associate**
-- **AWS Certified Cloud Practitioner**
+**RKE2/Rancher outage and disk I/O errors.** When the API stopped responding, I checked RKE2 restarts, etcd, containerd, kernel messages and Longhorn state instead of assuming it was just a Rancher problem. The kernel and filesystem errors established an I/O failure mechanism; they did not establish whether storage hardware, the hypervisor or contention started it. [Investigation notes](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/blob/main/runbooks/kubernetes/rke2-control-plane-resource-io-degradation.md).
 
-## Portfolio principles
+**Kafka listener migration.** I worked through a staged move from plaintext application access to certificate-based mTLS. Keeping the old path during validation meant checking broker readiness, certificate identities, client keystores, consumer groups and application-level message delivery before retiring the previous listener. [Migration runbook](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/blob/main/runbooks/kafka/kraft-rolling-mtls-listener-rollout.md).
 
-- No fabricated uptime, performance, or production-scale claims
-- Production work is generalized and sanitized before publication
-- Lab projects are clearly labeled as labs or references
-- CI and validation output are preferred over claims that cannot be reproduced
-- Recovery procedures include verification and safety boundaries, not just commands
-- Root-cause statements stop where the available evidence stops
-- Secrets, internal IPs, customer identifiers, private certificates, and environment-specific data stay out of public repositories
+**Redis Cluster routing.** An application could connect to Redis and still fail after receiving a `MOVED` redirect to an address or port it couldn't reach. I used cluster and proxy tests to separate Redis health from the route exposed to the application. [Runbook](https://github.com/natnaela-devops/devops-troubleshooting-runbooks/blob/main/runbooks/kubernetes/redis-cluster-moved-service-exposure.md).
 
-## Connect
+## Tools I use
 
-- [LinkedIn](https://www.linkedin.com/in/natnaela-devops)
-- [Email](mailto:natnaela.devops@gmail.com)
+- **Infrastructure:** Linux, RKE2/Kubernetes, Rancher, Longhorn, Docker, containerd, Nginx, systemd
+- **Automation and delivery:** Ansible, Bash, Helm, GitHub Actions, GitOps/Argo CD, Harbor, Kustomize
+- **Middleware and data:** Kafka/KRaft, Redis Cluster/Predixy, Keycloak, PostgreSQL, TimescaleDB, YugabyteDB, MySQL, Oracle client tooling
+- **Observability:** OpenSearch, OpenTelemetry, Prometheus, Alertmanager
+- **AWS:** Solutions Architect – Associate and Cloud Practitioner certifications; architecture exercises and labs, not claimed production AWS administration
+
+## A note about the public repos
+
+The banking diagrams and incident notes are adapted from work I did, not exports of an employer's environment. Hostnames, addresses, credentials, internal topology and customer details are omitted. The standalone labs are labeled as labs. Where an investigation left a root cause open, the runbook says so.
+
+**[LinkedIn](https://www.linkedin.com/in/natnaela-devops) · [Email](mailto:natnaela.devops@gmail.com)**
