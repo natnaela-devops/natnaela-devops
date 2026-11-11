@@ -28,7 +28,7 @@ I'm based in Addis Ababa, Ethiopia, and interested in DevOps, SRE, platform and 
 ## Tools I use
 
 - **Infrastructure:** Linux, RKE2/Kubernetes, Rancher, Longhorn, Docker, containerd, Nginx, systemd
-- **Automation and delivery:** Ansible, Bash, Helm, GitHub Actions, GitOps/Argo CD, Harbor, Kustomize
+- **Automation and delivery:** Ansible, Bash, Helm, GitLab CI/CD, GitHub Actions, GitOps/Argo CD, Harbor, Kustomize
 - **Middleware and data:** Kafka/KRaft, Redis Cluster/Predixy, Keycloak, PostgreSQL, TimescaleDB, YugabyteDB, MySQL, Oracle client tooling
 - **Observability:** OpenSearch, OpenTelemetry, Prometheus, Alertmanager
 - **AWS:** Solutions Architect – Associate and Cloud Practitioner certifications; architecture exercises and labs, not claimed production AWS administration
