@@ -1,6 +1,6 @@
 # Natnael Amsalu
 
-**DevOps / SRE | Linux · Kubernetes/RKE2 · Kafka · GitOps · Observability**
+**DevOps Engineer | Kubernetes, Linux & Kafka | AWS Certified**
 
 I work on Linux infrastructure and the services around it: Kubernetes clusters, application deployments, messaging, databases, reverse proxies, and monitoring. Most of my hands-on experience comes from supporting banking and public-health systems, where troubleshooting often crosses several layers.
 
@@ -16,6 +16,7 @@ I'm based in Addis Ababa, Ethiopia, and interested in DevOps, SRE, platform and 
 | [RKE2 HA reference](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup) | Three-server etcd quorum, separate workers, Longhorn and Kubernetes security settings. Includes [CI validation](https://github.com/natnaela-devops/kubernetes-rke2-cluster-setup/actions). |
 | [Spring Boot CI/CD lab](https://github.com/natnaela-devops/springboot-ci-cd-demo) | Maven tests, Docker build and health check, Kustomize validation, image publishing and a reviewable Argo CD promotion path. [Workflow runs](https://github.com/natnaela-devops/springboot-ci-cd-demo/actions). |
 | [Ansible host preparation](https://github.com/natnaela-devops/ansible-playbooks-collection) | Roles for common Linux setup, Docker and RKE2 prerequisites. CI covers lint, syntax and an idempotency check for the common role. [Workflow runs](https://github.com/natnaela-devops/ansible-playbooks-collection/actions). |
+| [Kafka and PostgreSQL resilience lab](https://github.com/natnaela-devops/kafka-postgres-ha-setup) | Docker Compose lab with a three-node Kafka KRaft quorum and PostgreSQL streaming replication, plus automated verification and broker-failure drills. PostgreSQL promotion is operator-driven, not automatic failover. [Workflow runs](https://github.com/natnaela-devops/kafka-postgres-ha-setup/actions). |
 
 ## Three problems that shaped how I work
 
